@@ -14,7 +14,8 @@ public class TaxableTests {
 	}
 	
 	@Test
-	public void DefaultTaxTypeIs1Basic() {
+	public void DefaultTaxTypeIs1Basic() {// TODO Auto-generated method stub
+
 		assert (item.getTaxType() == TaxInfo.TaxType.BASIC);
 	}
 	
