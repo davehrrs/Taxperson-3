@@ -36,13 +36,13 @@ public class TaxInfo {
 		int tax = taxInPercentagePoints / 100;
 		int taxCorrectionInPercentagePoints = taxInPercentagePoints % 100;
 
-		// This implements bankers Rounding
-		if ((tax % 2) == 1) {
-			if (taxCorrectionInPercentagePoints > 49) { 
+		// This implements Bankers Rounding
+		if ((tax % 2) == 1) {								// Tax is an odd amount
+			if (taxCorrectionInPercentagePoints > 49) { 	// Round up anything above 0.49 cents 
 				++tax;
 			}
-		} else {
-			if (taxCorrectionInPercentagePoints > 50) { 
+		} else {											// Tax is an even amount
+			if (taxCorrectionInPercentagePoints > 50) { 	// Round up anything above 0.50 cents 
 				++tax;
 			}
 		}
